@@ -4,19 +4,20 @@ using System.Text;
 using static System.Console;
 namespace menuTest
 {   
-    class Menu
+    class MenuUI
     {
         private int selectedIndex;
         private string[] Options;
         private string Prompt;
 
-        public Menu(string prompt, string[] options)
+        public MenuUI(string prompt, string[] options)
         {
             selectedIndex = 0;
             Options = options;
             Prompt = prompt;
         }
-        public void renderBoard()
+
+        public static void RenderBoard()
         {
             int width = (Console.BufferWidth - 3);
             int height = (Console.BufferHeight - 3);
@@ -46,6 +47,8 @@ namespace menuTest
 
         private void DisplayOptions()
         {
+            int baseLeft = 6;
+            //int baseTop = 4;
             for(int i = 0; i < Options.Length; i++)
             {
                 string currentOption = Options[i];
@@ -53,20 +56,26 @@ namespace menuTest
 
                 if (i == selectedIndex)
                 {
-                    prefix = $"{i}";
-                    ForegroundColor = ConsoleColor.Black;
-                    BackgroundColor = ConsoleColor.White;
+                    prefix = $">";
+                    ForegroundColor = ConsoleColor.White;
+                    BackgroundColor = ConsoleColor.Red;
                 }
                 else
                 {
-                    prefix = $"{i}";
+                    prefix = $" ";
                     ForegroundColor = ConsoleColor.White;
                     BackgroundColor = ConsoleColor.Black;
                 }
-                SetCursorPosition(5, 5 + i);
-                WriteLine($"{prefix} < {currentOption} >");
-            }
+                SetCursorPosition(baseLeft, 5 + (i*4));
+                WriteLine("   /                \\ ");
+                SetCursorPosition(baseLeft, 6 + (i*4));
+                WriteLine($" {prefix} | {currentOption} | ");
+                SetCursorPosition(baseLeft, 7 + (i*4));
+                WriteLine("   \\                / ");
+                SetCursorPosition(baseLeft, 8 + (i*4));
+            }   
             ResetColor();
+            WriteLine("                      ");
         }
 
         public int runMenu()
@@ -74,9 +83,11 @@ namespace menuTest
             ConsoleKey keyPressed;
             do
             {
-                renderBoard();
+                SetCursorPosition(0, 0);
+                Clear();
+                RenderBoard();
                 DisplayOptions();
-                SetCursorPosition(5, 3);
+                SetCursorPosition(4, 3);
                 WriteLine(Prompt);
 
                 ConsoleKeyInfo keyInfo = ReadKey(true);

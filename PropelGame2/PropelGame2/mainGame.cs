@@ -1,30 +1,32 @@
-﻿using menuTest;
+﻿using Game1Main;
+using menuTest;
 using System;
 using System.Security.Cryptography.X509Certificates;
 using static System.Console;
 
 namespace propelGameMain 
 {
-    class startMainGame
+    class MainGame
     {
         public void StartGame()
         {
             RunMainMenu();
         }
 
-        private void RunMainMenu()
+        public void RunMainMenu()
         {
             Clear();
             string prompt = "Select a option (arrows+enter)";
-            string[] options = { "    Game 1    ", "    Test 1    ", "    Test 2    ", "     Exit     " };
-            Menu mainMenu = new Menu(prompt, options);
+            string[] options = {"    Game 1    ", "    Test 1    ", "    Test 2    ", "     Exit     "};
+            MenuUI mainMenu = new MenuUI(prompt, options);
             int selectedIndex = mainMenu.runMenu();
 
-            SetCursorPosition(4, 12);
+            SetCursorPosition(30, 15);
+
             switch (selectedIndex)
             {
                 case 0:
-                    Game1();
+                    Game1();    
                     break;
                 case 1:
                     Game2();
@@ -43,9 +45,8 @@ namespace propelGameMain
 
         private void Game1()
         {
-            WriteLine("there is no game yet.");
-            ReadKey();
-            RunMainMenu();
+            Game1TestClass game1TestClass = new Game1TestClass();
+            game1TestClass.startGame1();
         }
         private void Game2()
         {
@@ -71,14 +72,14 @@ namespace propelGameMain
     {
         static void Main(string[] args)
         {
-           
-            Console.WindowWidth = 100;
+            Console.WindowWidth = 70;
             Console.WindowHeight = 30;
-            Console.BufferWidth = 100;
+            Console.BufferWidth = 70;
             Console.BufferHeight = 30;
-
-            startMainGame gameTest = new startMainGame();
-            gameTest.StartGame();
+            Clear();
+            SetCursorPosition(0, 0);
+            MainGame game = new MainGame();
+            game.StartGame();
         }
     }
 }
