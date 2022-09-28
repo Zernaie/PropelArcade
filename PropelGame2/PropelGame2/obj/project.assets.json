@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Evan\\Documents\\School\\Propel\\Project\\Main project\\v2\\PropelGame2\\PropelGame2\\PropelGame2.csproj",
-      "projectName": "PropelGame2",
-      "projectPath": "C:\\Users\\Evan\\Documents\\School\\Propel\\Project\\Main project\\v2\\PropelGame2\\PropelGame2\\PropelGame2.csproj",
+      "projectUniqueName": "C:\\Users\\Evan\\Documents\\School\\Propel\\Project\\Main project\\v2\\PropelGame2\\PropelGame2\\PropelArcade.csproj",
+      "projectName": "PropelArcade",
+      "projectPath": "C:\\Users\\Evan\\Documents\\School\\Propel\\Project\\Main project\\v2\\PropelGame2\\PropelGame2\\PropelArcade.csproj",
       "packagesPath": "C:\\Users\\Evan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Evan\\Documents\\School\\Propel\\Project\\Main project\\v2\\PropelGame2\\PropelGame2\\obj\\",
       "projectStyle": "PackageReference",

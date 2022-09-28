@@ -56,13 +56,13 @@ namespace menuTest
 
                 if (i == selectedIndex)
                 {
-                    prefix = $">";
+                    prefix = ">";
                     ForegroundColor = ConsoleColor.White;
                     BackgroundColor = ConsoleColor.Red;
                 }
                 else
                 {
-                    prefix = $" ";
+                    prefix = " ";
                     ForegroundColor = ConsoleColor.White;
                     BackgroundColor = ConsoleColor.Black;
                 }

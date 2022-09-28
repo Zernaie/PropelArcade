@@ -6,7 +6,7 @@ using static System.Console;
 
 namespace propelGameMain 
 {
-    class MainGame
+    class ArcadeMain
     {
         public void StartGame()
         {
@@ -78,7 +78,7 @@ namespace propelGameMain
             Console.BufferHeight = 30;
             Clear();
             SetCursorPosition(0, 0);
-            MainGame game = new MainGame();
+            ArcadeMain game = new ArcadeMain();
             game.StartGame();
         }
     }
