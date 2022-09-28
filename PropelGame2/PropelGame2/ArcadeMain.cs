@@ -1,4 +1,4 @@
-﻿using Game1Main;
+﻿using Game1;
 using menuTest;
 using System;
 using System.Security.Cryptography.X509Certificates;
@@ -45,8 +45,8 @@ namespace propelGameMain
 
         private void Game1()
         {
-            Game1TestClass game1TestClass = new Game1TestClass();
-            game1TestClass.startGame1();
+            Game1Main game1Main = new Game1Main();
+            game1Main.StartGame1();
         }
         private void Game2()
         {
