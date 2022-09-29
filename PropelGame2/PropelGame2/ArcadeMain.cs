@@ -46,7 +46,7 @@ namespace propelGameMain
         private void Game1()
         {
             Game1Main game1Main = new Game1Main();
-            game1Main.StartGame1();
+            game1Main.GameStart();
         }
         private void Game2()
         {
