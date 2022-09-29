@@ -1,0 +1,17 @@
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\PropelArcade.exe
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\PropelArcade.deps.json
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\PropelArcade.runtimeconfig.json
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\PropelArcade.dll
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\PropelArcade.pdb
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.csproj.AssemblyReference.cache
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.AssemblyInfoInputs.cache
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.AssemblyInfo.cs
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.csproj.CoreCompileInputs.cache
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.dll
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\refint\PropelArcade.dll
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.pdb
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\PropelArcade.genruntimeconfig.cache
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\obj\Release\net6.0\ref\PropelArcade.dll
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\Game1map.txt
+C:\Users\Evan\Documents\School\Propel\Project\Main project\v2\PropelGame2\PropelGame2\bin\Release\net6.0\Game1maptest.txt

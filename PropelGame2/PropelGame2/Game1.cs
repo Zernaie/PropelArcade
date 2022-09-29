@@ -7,35 +7,43 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks.Dataflow;
 using System.Transactions;
 using System.Xml;
+using System.IO;
 using static System.Console;
 
 namespace Game1
-{
-    class Game1Main
+{   
+    class MapParser
     {
-        private Game1World MyWorld;
-        private Game1Player CurrentPlayer;
-        // mmethod to update player position
-        public static void SetPlayerPos(int x,int y)
-        {
-            SetCursorPosition(x, y);
-            Write("@");
-        }
         public static string[,] ConvertToArray(string FileToConvert)
         {
             string[] lines = File.ReadAllLines(FileToConvert);
             string firstLine = lines[0];
-            int rows = lines.Length;
-            int collumns = firstLine.Length;
-            string[,] grid = new string[rows, collumns];
+            int Rows = lines.Length;
+            int Collumns = firstLine.Length;
+            string[,] grid = new string[Rows, Collumns];
+            for (int y = 0; y < Rows; y++)
+            {
+                string line = lines[y];
+                for (int x = 0; x < Collumns; x++)
+                {
+                    char currentChar = line[x];
+                    grid[y, x] = currentChar.ToString();
+                }   
+            }
 
-            return grid;
-        }
+            return grid;        
+        }   
+    }
+    class Game1Main
+    {
+        private Game1World MyWorld;
+        private Game1Player CurrentPlayer;
 
         public void DrawBoard()
             // grid for creating the map and player movement
         {
-            string[,] grid = {
+            string[,] grid = MapParser.ConvertToArray("Game1map.txt");
+            /*string[,] grid = {
             {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_",},
             {"█","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","█",},
             {"█","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","█",},
@@ -63,9 +71,9 @@ namespace Game1
             {"█","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","█",},
             {"█","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","█",}, 
             {"■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■","■",},
-            };
+            };*/
             MyWorld = new Game1World(grid);
-            CurrentPlayer = new Game1Player(ConsoleColor.Blue, 2, 2);
+            CurrentPlayer = new Game1Player(ConsoleColor.Blue, 30, 41);
         }
         // redraw and update all the visuals
         private void DrawFrame()
@@ -139,6 +147,7 @@ namespace Game1
         public static int GridY;
         private int Rows;
         private int Collumns;
+
         public Game1World(string[,] grid)
         {
             Grid = grid;
@@ -167,7 +176,7 @@ namespace Game1
             {
                 return false; 
             }
-            return Grid[y, x] == "";
+            return Grid[y, x] == " ";
         }
     }
 

@@ -72,10 +72,10 @@ namespace propelGameMain
     {
         static void Main(string[] args)
         {
-            Console.WindowWidth = 70;
-            Console.WindowHeight = 30;
-            Console.BufferWidth = 70;
-            Console.BufferHeight = 30;
+            Console.WindowWidth = 100;
+            Console.WindowHeight = 50;
+            Console.BufferWidth = 100;
+            Console.BufferHeight = 50;
             Clear();
             SetCursorPosition(0, 0);
             ArcadeMain game = new ArcadeMain();
