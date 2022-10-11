@@ -57,7 +57,7 @@ namespace World
                 }
             }
         }
-        public bool CollDetect(int x, int y)
+        public bool CollDetect(int x, int y, int PlrId)
         {
             // detects if outside the grid or if touching a grid character
             if (x < 0 || y < 0 || x >= Columns || y >= Rows)

@@ -20,7 +20,12 @@ namespace MainGame
             CreateWorld world = new CreateWorld();
             world.CreateWorldMap();
             PlayerClass player = new PlayerClass();
-            player.CreatePlayer(10, 20, ConsoleColor.Cyan, 0);
+            Thread player1 = new Thread(() => player.CreatePlayer(10,20, ConsoleColor.Cyan,0));
+            player1.Start();
+            Thread player2 = new Thread(() => player.CreatePlayer(11, 20, ConsoleColor.Red, 1));
+            player2.Start();
+
+            //player.CreatePlayer(20, 10, ConsoleColor.Red, 1);
             //player.CreatePlayer(19, 19, ConsoleColor.Red, 0);
             GameLoop();
             
